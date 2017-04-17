@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/find_laytou_head"
+    >
+
+    <RelativeLayout
+        android:id="@+id/find_laytou_head_"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/color_white">
+
+        <ImageView
+            android:id="@+id/img_baskw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:minHeight="70dp"
+            android:minWidth="95dp"
+            android:padding="15dp"
+            android:src="@mipmap/tu1" />
+
+        <TextView
+            android:id="@+id/tv_baskw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@+id/img_baskw"
+            android:layout_toRightOf="@+id/img_baskw"
+            android:text="晒单分享" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_baskw"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/img_baskw"
+            android:layout_toRightOf="@+id/img_baskw"
+            android:text="没错，就是我中的！来咬我啊！"
+            android:textColor="@color/color_gray"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:src="@mipmap/ic_more" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@+id/find_laytou_head_">
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.hongbaogou.activity.PayOrderActivity">
+
+    <RelativeLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@color/actionbar_bg">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/actionbar_press"
+            android:onClick="back"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:id="@+id/sd_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toLeftOf="@id/menuItem"
+            android:layout_toRightOf="@+id/back"
+            android:gravity="left"
+            android:singleLine="true"
+            android:text="@string/pay_order"
+            android:textColor="@color/actionbar_title"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/actiobar_line"
+            android:layout_alignParentBottom="true"
+            android:background="@color/actionbar_line" />
+    </RelativeLayout>
+
+    <com.hongbaogou.view.NetErrorView
+        android:id="@+id/netErrorView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/action_bar" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/action_bar"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="showOrderList"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:singleLine="true"
+                    android:text="@string/order_list"
+                    android:textColor="@color/order_list"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_pay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/order_money"
+                    android:textSize="15sp" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/actiobar_line"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/actionbar_line" />
+            </RelativeLayout>
+
+            <com.hongbaogou.view.NoScrollListview
+                android:id="@+id/orderList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/order_list_bg"
+                android:divider="@null"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+                <TextView
+                    android:id="@+id/remainderMoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:singleLine="true"
+                    android:text="@string/remainder_money"
+                    android:textColor="@color/order_list"
+                    android:textSize="13sp" />
+
+
+                <CheckBox
+                    android:id="@+id/checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:button="@null"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:drawablePadding="8dp"
+                    android:drawableRight="@drawable/pay_order_selected"
+                    android:gravity="center"
+                    android:textColor="@color/order_money"
+                    android:textSize="15sp"
+                    android:visibility="gone" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/actiobar_line"
+                android:layout_alignParentBottom="true"
+                android:background="@color/actionbar_line" />
+
+            <RelativeLayout
+                android:id="@+id/pay_hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:singleLine="true"
+                    android:text="@string/other_order"
+                    android:textColor="@color/order_list"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30dp"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:singleLine="true"
+                    android:text="@string/pay_order_money_other"
+                    android:textColor="@color/order_money"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/actiobar_line"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/actionbar_line" />
+            </RelativeLayout>
+
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:visibility="visible">
+
+                <RadioButton
+                    android:background="@color/ipay_transparent"
+                    android:id="@+id/rb_wxpay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/pay_selected"
+                    android:drawablePadding="8dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/recharge_way_weixin"
+                    android:textColor="@color/pay_way" />
+
+                <View
+                    android:id="@+id/wxpay_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/actiobar_line"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/actionbar_line" />
+
+                <RadioButton
+                    android:background="@color/ipay_transparent"
+                    android:id="@+id/rb_alipay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/pay_selected"
+                    android:drawablePadding="8dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/recharge_way_zhifubao"
+                    android:textColor="@color/pay_way"
+                    android:visibility="visible" />
+
+                <View
+                    android:id="@+id/alipay_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/actiobar_line"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/actionbar_line" />
+
+                <RadioButton
+                    android:background="@color/ipay_transparent"
+                    android:id="@+id/rb_jdpay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/pay_selected"
+                    android:drawablePadding="8dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/recharge_way_jdpay"
+                    android:textColor="@color/pay_way"
+                    android:visibility="visible" />
+
+                <View
+                    android:id="@+id/jdpay_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/actiobar_line"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/actionbar_line" />
+
+                <RadioButton
+                    android:background="@color/ipay_transparent"
+                    android:id="@+id/rb_aibei"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/pay_selected"
+                    android:drawablePadding="8dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/recharge_way_aibei"
+                    android:textColor="@color/pay_way"
+                    android:visibility="visible" />
+
+                <View
+                    android:id="@+id/aibei_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/actiobar_line"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/actionbar_line" />
+
+                <RadioButton
+                    android:background="@color/ipay_transparent"
+                    android:id="@+id/rb_hfb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/pay_selected"
+                    android:drawablePadding="8dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/recharge_way_hfb"
+                    android:textColor="@color/pay_way"
+                    android:visibility="visible" />
+
+                <View
+                    android:id="@+id/hfb_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/actiobar_line"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/actionbar_line" />
+            </RadioGroup>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="30dp"
+                android:background="@mipmap/pay_sure"
+                android:gravity="center"
+                android:onClick="pay"
+                android:text="@string/pay_order_sure"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

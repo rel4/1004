@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.hongbaogou.activity.GoodsListActivity">
+
+    <RelativeLayout
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/actionbar_bg">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/actionbar_press"
+            android:onClick="back"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:id="@+id/menuItem"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="@string/addAllToList"
+            android:visibility="gone"
+            android:textColor="@color/goods_list_addAll" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toLeftOf="@id/menuItem"
+            android:layout_toRightOf="@+id/btn_back"
+            android:gravity="left"
+            android:singleLine="true"
+            android:textColor="@color/goods_list_title"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/actiobar_line"
+            android:layout_alignParentBottom="true"
+            android:background="@color/actionbar_line" />
+    </RelativeLayout>
+
+
+    <com.hongbaogou.view.refresh.PtrClassicFrameLayout xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/refreshView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/actionbar"
+        android:descendantFocusability="blocksDescendants"
+        cube_ptr:ptr_duration_to_close="400"
+        cube_ptr:ptr_duration_to_close_header="400"
+        cube_ptr:ptr_keep_header_when_refresh="true"
+        cube_ptr:ptr_pull_to_fresh="false"
+        cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+        cube_ptr:ptr_resistance="2.4">
+
+        <com.hongbaogou.view.loadmoregridview.LoadMoreListViewContainer
+            android:id="@+id/load_more_listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/home_line">
+
+            <ListView
+                android:id="@+id/goodsList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/goods_listSelector"
+                android:dividerHeight="0.5dp"
+                android:overScrollMode="never" />
+
+            <com.hongbaogou.view.NetErrorView
+                android:id="@+id/netErrorView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+        </com.hongbaogou.view.loadmoregridview.LoadMoreListViewContainer>
+
+    </com.hongbaogou.view.refresh.PtrClassicFrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="home_gridview_dividing_line">1dp</dimen>
+    <dimen name="home_tab_bottom_line">0.5dp</dimen>
+
+    <dimen name="home_category_img">32dp</dimen>
+    <dimen name="home_category_tx">15sp</dimen>
+
+    <dimen name="home_grid_img">100dp</dimen>
+    <dimen name="actiobar_line">0.5dp</dimen>
+
+    <dimen name="goods_produceimg">80dp</dimen>
+    <dimen name="lucknumber_marginright">10dp</dimen>
+    <dimen name="lucknumber_size">12sp</dimen>
+
+    <dimen name="banner_height">100dp</dimen>
+
+    <dimen name="iconimg">80dp</dimen>
+
+    <dimen name="win_grid_height">220dp</dimen>
+
+    <dimen name="viewline">0.2dp</dimen>
+    <dimen name="wincontenttitle">25dp</dimen>
+    <dimen name="wintitle">15dp</dimen>
+    <dimen name="wincontent">10dp</dimen>
+    <dimen name="title_text_size">17sp</dimen>
+</resources>

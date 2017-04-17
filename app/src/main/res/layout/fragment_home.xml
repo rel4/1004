@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.HomeFragment">
+
+    <RelativeLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/main_checkBox_text_selected">
+
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:padding="15dp"
+            android:src="@mipmap/search" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:src="@mipmap/title_logo" />
+    </RelativeLayout>
+
+
+    <com.hongbaogou.view.refresh.PtrClassicFrameLayout xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/refreshView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/head"
+        cube_ptr:ptr_duration_to_close="400"
+        cube_ptr:ptr_duration_to_close_header="400"
+        cube_ptr:ptr_keep_header_when_refresh="true"
+        cube_ptr:ptr_pull_to_fresh="false"
+        cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+        cube_ptr:ptr_resistance="2.4">
+
+
+        <com.hongbaogou.view.loadmoregridview.LoadMoreGridViewContainer
+            android:id="@+id/load_more_grid_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <com.hongbaogou.view.loadmoregridview.GridViewWithHeaderAndFooter
+                android:id="@+id/gridView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/home_gridview_bg"
+                android:footerDividersEnabled="true"
+                android:horizontalSpacing="@dimen/home_gridview_dividing_line"
+                android:numColumns="2"
+                android:overScrollMode="never"
+                android:verticalSpacing="@dimen/home_gridview_dividing_line" />
+        </com.hongbaogou.view.loadmoregridview.LoadMoreGridViewContainer>
+
+    </com.hongbaogou.view.refresh.PtrClassicFrameLayout>
+
+
+</RelativeLayout>

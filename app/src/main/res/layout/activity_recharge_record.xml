@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.hongbaogou.activity.RechargeRecordActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/actionbar_bg">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/actiobar_line"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/iv_recharge_recodes"
+            android:background="@color/actionbar_line" />
+
+        <ImageView
+            android:id="@+id/iv_recharge_recodes"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/actionbar_press"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:src="@mipmap/back" />
+
+        <ImageView
+            android:id="@+id/menuItem"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_recharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toLeftOf="@id/menuItem"
+            android:layout_toRightOf="@+id/iv_recharge_recodes"
+            android:gravity="left"
+            android:singleLine="true"
+            android:text="充值记录"
+            android:textColor="@color/actionbar_title"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/titleright"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/tv_recharge"
+            android:layout_marginRight="15dp"
+            android:background="@null"
+            android:gravity="right"
+            android:onClick="onClick"
+            android:textColor="@color/color_blue"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/viewline"
+        android:background="@color/actionbar_line" />
+
+    <TextView
+        android:id="@+id/tv_recharge_explain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout3"
+        android:background="@color/actionbar_bg"
+        android:padding="15dp"
+        android:text="@string/recharge_explain"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tv_recharge_no"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativeLayout3"
+        android:background="@color/actionbar_bg"
+        android:padding="15dp"
+        android:text="暂无数据，请充值！"
+        android:textColor="@color/black"
+        android:visibility="gone" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/viewline"
+        android:background="@color/actionbar_line" />
+
+    <com.hongbaogou.view.refresh.PtrClassicFrameLayout xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/refreshView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView5"
+        android:descendantFocusability="blocksDescendants"
+        cube_ptr:ptr_duration_to_close="400"
+        cube_ptr:ptr_duration_to_close_header="400"
+        cube_ptr:ptr_keep_header_when_refresh="true"
+        cube_ptr:ptr_pull_to_fresh="false"
+        cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+        cube_ptr:ptr_resistance="2.4">
+
+        <com.hongbaogou.view.loadmoregridview.LoadMoreListViewContainer
+            android:id="@+id/load_more_listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/home_line">
+
+            <ListView
+                android:id="@+id/lv_payrecodes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/refreshView"
+                android:background="@color/actionbar_bg" />
+
+            <com.hongbaogou.view.NetErrorView
+                android:id="@+id/netErrorView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.hongbaogou.view.loadmoregridview.LoadMoreListViewContainer>
+
+    </com.hongbaogou.view.refresh.PtrClassicFrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="@color/actionbar_line" />
+
+</LinearLayout>

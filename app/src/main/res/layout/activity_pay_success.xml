@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.hongbaogou.activity.PaySuccessActivity">
+
+    <include layout="@layout/base_actionbar"></include>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:text="@string/rechargesuccessfirst" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/rechargesuccesssec"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/rechargesuccessthird" />
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/btn_recharge_bindtel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:onClick="back"
+            android:text="绑定手机号码，"
+            android:textColor="@color/color_blue" />
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rechargesuccessthirds" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_recharge_continuesuperise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@mipmap/recharge_continuesuperise"
+        android:onClick="back"
+        android:text="@string/recharge_continuesuperise"
+        android:textColor="@color/white"
+        android:textSize="18dp" />
+</LinearLayout>

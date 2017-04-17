@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.hongbaogou.activity.WinRecordSignInActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/actionbar_bg">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/actiobar_line"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/iv_winrecodessingin_back"
+            android:background="@color/actionbar_line" />
+
+        <ImageView
+            android:id="@+id/iv_winrecodessingin_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/actionbar_press"
+            android:onClick="onClick"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:src="@mipmap/back" />
+
+        <ImageView
+            android:id="@+id/menuItem"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_recharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="中奖确认"
+            android:textColor="@color/actionbar_title"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actiobar_line"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/iv_winrecodessingin_back"
+        android:background="@color/actionbar_line" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/actionbar_bg"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/wincontent"
+                android:text="奖品状态"
+                android:textColor="@color/actionbar_title"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/actiobar_line"
+                android:layout_alignBottom="@+id/viewline"
+                android:background="@color/actionbar_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@color/actionbar_bg"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_signin_get"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@mipmap/winrecord_noensure"
+                        android:paddingLeft="5dp"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/iv_iv_signin_get_line"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:background="@mipmap/winrecord_signin_line"
+                        android:visibility="visible" />
+
+
+                    <ImageView
+                        android:id="@+id/iv_signin_ensureadress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@mipmap/winrecord_noensure"
+                        android:paddingLeft="5dp"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/iv_signin_ensureadress_line"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:background="@mipmap/winrecord_signin_line"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/iv_signin_prize"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/winrecord_noensure"
+                        android:paddingLeft="5dp"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/iv_signin_prize_line"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:background="@mipmap/winrecord_signin_line"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/iv_signin_ensureprize"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/winrecord_noensure"
+                        android:paddingLeft="5dp"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/iv_signin_ensureprize_line"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:background="@mipmap/winrecord_signin_line"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/iv_signin_ensure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:background="@mipmap/winrecord_noensure"
+                        android:paddingLeft="5dp"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_signin_get"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tv_signin_get"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignBaseline="@+id/tv_signin_gettime"
+                            android:layout_alignBottom="@+id/tv_signin_gettime"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:gravity="center_vertical"
+                            android:text="获得奖品"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/tv_signin_gettime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center_vertical"
+                            android:paddingRight="10dp"
+                            android:text="2015-12-15 22：54"
+                            android:visibility="invisible" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/viewline"
+                            android:layout_alignBottom="@+id/tv_signin_get"
+                            android:background="@color/actionbar_line" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl_signin_ensureadress"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tv_signin_ensureadress"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="确认收货地址"
+                            android:visibility="visible" />
+
+                        <TextView
+
+                            android:id="@+id/tv_signin_ensureadresstime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center_vertical"
+                            android:paddingRight="10dp"
+                            android:text="2015-12-15 22：54"
+                            android:visibility="invisible" />
+                        <Button
+                            android:textSize="12sp"
+                            android:id="@+id/btn_signin_ensureaddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="15dp"
+                            android:background="@mipmap/personaldata_sendsms"
+                            android:onClick="onClick"
+                            android:text="确认收货地址"
+                            android:textColor="@color/white"
+                            android:visibility="invisible" />
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/viewline"
+                            android:layout_alignBottom="@+id/tv_signin_ensureadress"
+                            android:background="@color/actionbar_line" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl_signin_prize"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tv_signin_prize"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:gravity="center_vertical"
+                            android:text="奖品派发"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/tv_signin_prizetime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center_vertical"
+                            android:paddingRight="10dp"
+                            android:text="2015-12-15 22：54"
+                            android:visibility="invisible" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/viewline"
+                            android:layout_alignBottom="@+id/tv_signin_prize"
+                            android:background="@color/actionbar_line" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl_signin_ensureprize"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tv_signin_ensureprize"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="确认收货"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/tv_signin_ensureprizetime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center_vertical"
+                            android:paddingRight="10dp"
+                            android:text="2015-12-15 22：54"
+                            android:visibility="invisible" />
+
+                        <View
+                            android:id="@+id/view3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/viewline"
+                            android:layout_alignBottom="@+id/tv_signin_ensureprize"
+                            android:background="@color/actionbar_line" />
+
+                        <Button
+                            android:id="@+id/btn_signin_ensureprize"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="15dp"
+                            android:background="@mipmap/personaldata_sendsms"
+                            android:onClick="onClick"
+                            android:text="确认收货"
+                            android:textColor="@color/white"
+                            android:visibility="invisible" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl_signin_ensure"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tv_signin_ensure"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:gravity="center_vertical"
+                            android:text="已签收"
+                            android:visibility="visible" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/wincontent"
+                android:background="@color/color_viewline" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/actionbar_bg"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/wincontent"
+                android:text="物流信息"
+                android:textColor="@color/actionbar_title"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/actionbar_bg"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/viewline"
+                    android:layout_below="@+id/tv_signin_ensure"
+                    android:background="@color/color_gray_di" />
+
+                <TextView
+                    android:text="物流公司:"
+                    android:id="@+id/tv_logisticsinformation_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/wincontenttitle"
+                    android:paddingRight="10dp"
+                    android:paddingTop="@dimen/wincontent"
+                    android:textColor="@color/actionbar_title" />
+
+                <TextView
+                    android:text="运单号码：:"
+                    android:id="@+id/tv_logisticsinformation_company"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/wincontenttitle"
+                    android:paddingTop="@dimen/wincontent"
+                     />
+
+                <TextView
+                    android:id="@+id/tv_logisticsinformation_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/wincontent"
+                    android:paddingLeft="@dimen/wincontenttitle"
+                    android:paddingTop="@dimen/wincontent"
+                    />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/wincontent"
+                android:background="@color/color_viewline" />
+
+            <TextView
+                android:id="@+id/tv_winuser"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/actionbar_bg"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/wincontent"
+                android:text="地址信息"
+                android:textColor="@color/actionbar_title"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/actionbar_bg">
+
+                <TextView
+                    android:id="@+id/tv_winuser_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignTop="@+id/tv_winuser_tel"
+
+                    android:paddingLeft="@dimen/wincontenttitle"
+                    android:paddingTop="@dimen/wincontent"
+                     />
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/viewline"
+                    android:background="@color/actionbar_line" />
+
+                <TextView
+                    android:id="@+id/tv_winuser_tel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="@dimen/wincontent"
+                    android:paddingTop="@dimen/wincontent"
+                    android:text=""
+                    android:textColor="@color/actionbar_title" />
+
+                <TextView
+                    android:id="@+id/tv_winuser_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@+id/tv_winuser_name"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="@dimen/wincontent"
+                    android:paddingLeft="@dimen/wincontenttitle"
+                    android:paddingTop="@dimen/wincontent"
+                    />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/wincontent"
+                android:background="@color/color_viewline" />
+
+            <TextView
+                android:id="@+id/tv_winuser_prize"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/actionbar_bg"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/wincontent"
+                android:text="奖品信息"
+                android:textColor="@color/actionbar_title"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/viewline"
+                android:background="@color/actionbar_line" />
+
+            <RelativeLayout
+                android:id="@+id/ll_signin"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@color/actionbar_bg"
+                android:clickable="true"
+                android:onClick="onClick">
+
+                <com.android.volley.toolbox.NetworkImageView
+                    android:id="@+id/netImage_winrecord"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@null" />
+
+                <ImageView
+                    android:id="@+id/img_ten"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="3dp"
+                    android:src="@mipmap/ten_image" />
+
+                <TextView
+                    android:id="@+id/tv__winrecord_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/netImage_winrecord"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginStart="14dp"
+                    android:layout_toEndOf="@+id/netImage_winrecord"
+                    android:layout_toRightOf="@+id/netImage_winrecord"
+                    android:padding="2dp"
+                    android:textSize="15sp" />
+
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/tv__winrecord_zongrenshu"
+                    android:layout_alignStart="@+id/tv__winrecord_zongrenshu"
+                    android:layout_below="@+id/tv__winrecord_zongrenshu"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="2dp"
+                    android:paddingTop="2dp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv__winrecord_q_user_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/textView10"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_toEndOf="@+id/textView10"
+                    android:layout_toRightOf="@+id/textView10"
+                    android:paddingBottom="2dp"
+                    android:paddingTop="2dp"
+
+                    android:textColor="@color/color_shen_red" />
+
+                <TextView
+                    android:id="@+id/tv__winrecord_q_user_renci"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textView10"
+                    android:layout_alignStart="@+id/textView10"
+                    android:layout_below="@+id/textView10"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="2dp"
+                     />
+
+                <TextView
+                    android:id="@+id/tv__winrecord_q_user_q_end_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/tv__winrecord_q_user_renci"
+                    android:layout_alignStart="@+id/tv__winrecord_q_user_renci"
+                    android:layout_below="@+id/tv__winrecord_q_user_renci"
+                    android:padding="2dp"
+
+                    />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/actiobar_line"
+                    android:layout_below="@+id/tv__winrecord_q_user_q_end_time"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/actionbar_line" />
+
+
+                <TextView
+                    android:id="@+id/tv__winrecord_qishu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/tv__winrecord_title"
+                    android:layout_alignStart="@+id/tv__winrecord_title"
+                    android:layout_below="@+id/tv__winrecord_title"
+                    android:padding="2dp"
+                     />
+
+
+                <TextView
+                    android:id="@+id/tv__winrecord_zongrenshu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/tv__winrecord_qishu"
+                    android:layout_alignStart="@+id/tv__winrecord_qishu"
+                    android:layout_below="@+id/tv__winrecord_qishu"
+                    android:padding="2dp"
+                   />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="@color/actionbar_bg"
+    tools:context="com.hongbaogou.activity.RechargeActivity">
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/actionbar_bg">
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/actiobar_line"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/iv_recharge_title"
+            android:background="@color/actionbar_line" />
+
+
+        <ImageView
+            android:id="@+id/iv_recharge_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/actionbar_press"
+            android:onClick="onClick"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:src="@mipmap/back" />
+
+        <ImageView
+            android:id="@+id/menuItem"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_recharge_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toLeftOf="@id/menuItem"
+            android:layout_toRightOf="@+id/iv_recharge_title"
+            android:gravity="left"
+            android:singleLine="true"
+            android:textColor="@color/actionbar_title"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actiobar_line"
+        android:layout_alignParentBottom="true"
+        android:background="@color/actionbar_line" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_recharge_explain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/recharge_background"
+                android:padding="15dp"
+                android:text="@string/recharge_explain"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/actionbar_bg"
+                android:padding="15dp"
+                android:text="@string/recharge_choose"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/actionbar_bg"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/wincontent"
+                android:paddingRight="@dimen/wincontent">
+
+                <Button
+                    android:id="@+id/btn_charge_choose_a"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:onClick="onClick"
+                    android:text="20"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/btn_charge_choose_b"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:onClick="onClick"
+                    android:text="50"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/btn_charge_choose_c"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:onClick="onClick"
+                    android:text="100"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/actionbar_bg"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/wincontent"
+                android:paddingRight="@dimen/wincontent">
+
+                <Button
+                    android:id="@+id/btn_charge_choose_d"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:onClick="onClick"
+                    android:text="200"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/btn_charge_choose_e"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:onClick="onClick"
+                    android:text="500"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:minLines="1"
+                    android:maxLines="4"
+                    android:id="@+id/et_charge_choose"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:hint="其他金额"
+                    android:inputType="number"
+                    android:onClick="onClick"
+                    android:padding="14dp"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <TextView
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/actionbar_bg"
+                android:padding="@dimen/wintitle"
+                android:text="@string/recharge_way"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/actionbar_bg"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/radiogroup_recharge"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/wincontent">
+
+
+
+                    <RadioButton
+                        android:background="@color/ipay_transparent"
+                        android:id="@+id/rb_wxpay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/pay_selected"
+                        android:drawablePadding="8dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="10dp"
+                        android:text="@string/recharge_way_weixin"
+                        android:textColor="@color/pay_way" />
+
+                    <View
+                        android:id="@+id/wxpay_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/actiobar_line"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/actionbar_line" />
+
+                    <RadioButton
+                        android:background="@color/ipay_transparent"
+                        android:id="@+id/rb_alipay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/pay_selected"
+                        android:drawablePadding="8dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="10dp"
+                        android:text="@string/recharge_way_zhifubao"
+                        android:textColor="@color/pay_way"
+                        android:visibility="visible" />
+
+                    <View
+                        android:id="@+id/alipay_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/actiobar_line"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/actionbar_line" />
+
+                    <RadioButton
+                        android:background="@color/ipay_transparent"
+                        android:id="@+id/rb_jdpay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/pay_selected"
+                        android:drawablePadding="8dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="10dp"
+                        android:text="@string/recharge_way_jdpay"
+                        android:textColor="@color/pay_way"
+                        android:visibility="visible" />
+
+                    <View
+                        android:id="@+id/jdpay_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/actiobar_line"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/actionbar_line" />
+
+                    <RadioButton
+                        android:background="@color/ipay_transparent"
+                        android:id="@+id/rb_aibei"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/pay_selected"
+                        android:drawablePadding="8dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="10dp"
+                        android:text="@string/recharge_way_aibei"
+                        android:textColor="@color/pay_way"
+                        android:visibility="visible" />
+
+                    <View
+                        android:id="@+id/aibei_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/actiobar_line"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/actionbar_line" />
+
+                    <RadioButton
+                        android:background="@color/ipay_transparent"
+                        android:id="@+id/rb_hfb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/pay_selected"
+                        android:drawablePadding="8dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="10dp"
+                        android:text="@string/recharge_way_hfb"
+                        android:textColor="@color/pay_way"
+                        android:visibility="visible" />
+
+                    <View
+                        android:id="@+id/hfb_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/actiobar_line"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/actionbar_line" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/tv_recharge_firstpay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/radiogroup_recharge"
+                    android:layout_alignStart="@+id/radiogroup_recharge"
+                    android:layout_alignTop="@+id/radiogroup_recharge"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginStart="110dp"
+                    android:background="@mipmap/recharge_firstpay"
+                    android:gravity="center"
+                    android:text="@string/recharge_firstpay"
+                    android:textColor="@color/white"
+                    android:textSize="8dp"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <Button
+                android:layout_gravity="center"
+                android:id="@+id/btn_recharge_ensurepay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@mipmap/recharge_ensurepay"
+                android:onClick="onClick"
+                android:text="@string/recharge_ensurepay"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

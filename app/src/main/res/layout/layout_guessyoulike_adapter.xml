@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/actionbar_bg">
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/imageView_guess_ten"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ten_image"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+        <com.android.volley.toolbox.NetworkImageView
+            android:src="@mipmap/img_blank"
+            android:gravity="center"
+            android:id="@+id/imageView_guess_thumb"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+           android:layout_below="@+id/imageView_guess_ten"
+            android:layout_centerHorizontal="true" />
+
+
+        <TextView
+            android:ellipsize="end"
+            android:lines="2"
+            android:id="@+id/tv_guess_title"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="title"
+            android:layout_below="@+id/imageView_guess_thumb"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal" />
+
+        <ProgressBar
+            android:id="@+id/progress_guess"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="6dp"
+            android:layout_below="@+id/tv_guess_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+            android:indeterminate="false"
+            android:max="100"
+            android:minWidth="50dp"
+            android:progress="10"
+            android:progressDrawable="@drawable/progressbar_color"
+            android:layout_gravity="center_horizontal" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants" >
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="0.71">
+
+    <RelativeLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tv_personaldata_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="username" />
+
+    <TextView
+        android:id="@+id/tv_personaldata_usertel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1300"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/tv_personaldata_username"
+        android:layout_toEndOf="@+id/tv_personaldata_username"
+        android:layout_marginLeft="70dp"
+        android:layout_marginStart="70dp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[默认]"
+            android:textColor="@color/color_blue" />
+
+        <TextView
+            android:id="@+id/tv_showAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="地址"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/tv_default"
+            android:layout_toEndOf="@+id/tv_default"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>
+    <ImageView
+
+       android:src="@mipmap/address_nochecked"
+        android:id="@+id/iv_address_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp" />
+</RelativeLayout>

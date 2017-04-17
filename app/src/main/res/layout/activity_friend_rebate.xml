@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context="com.hongbaogou.activity.FriendRebateActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/actionbar_bg">
+
+        <View
+android:layout_below="@+id/iv_about_back"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/actiobar_line"
+            android:layout_alignParentBottom="true"
+            android:background="@color/actionbar_line" />
+
+        <ImageView
+            android:background="@drawable/actionbar_press"
+            android:id="@+id/iv_about_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:onClick="onClick"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:src="@mipmap/back" />
+
+        <ImageView
+            android:background="@drawable/actionbar_press"
+            android:onClick="onClick"
+            android:src="@mipmap/btn_refresh"
+            android:id="@+id/iv_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:visibility="visible" />
+
+        <TextView
+            android:text="好友返利"
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toLeftOf="@id/iv_refresh"
+            android:layout_toRightOf="@+id/iv_about_back"
+            android:gravity="left"
+            android:singleLine="true"
+            android:textColor="@color/actionbar_title"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+
+    <com.hongbaogou.view.ProgressBarWebView
+        android:id="@+id/webview_about"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</LinearLayout>

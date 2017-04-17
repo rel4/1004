@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_qian"
+    android:fitsSystemWindows="true"
+    tools:context="com.hongbaogou.activity.ClassfyActivity">
+
+    <include
+        android:id="@+id/title_layout"
+        layout="@layout/base_actionbar" />
+
+    <ListView
+        android:id="@+id/classfy_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_layout"
+        android:dividerHeight="0.5dp"
+        android:overScrollMode="never"
+        android:divider="@color/color_gray_shen" />
+
+    <com.hongbaogou.view.NetErrorView
+        android:id="@+id/netErrorView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

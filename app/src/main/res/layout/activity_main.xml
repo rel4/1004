@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    tools:context="com.hongbaogou.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/tabView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/home_gridview_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/home_gridview_bg"
+            android:gravity="center"
+            android:weightSum="5">
+
+            <CheckBox
+                android:id="@+id/home"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:button="@null"
+                android:checked="true"
+                android:drawablePadding="3dp"
+                android:drawableTop="@drawable/home_selected"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="@string/home"
+                android:textColor="@drawable/tabitem_text_seleced"
+                android:textSize="12sp" />
+
+            <CheckBox
+                android:id="@+id/win"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:button="@null"
+                android:checked="false"
+                android:drawablePadding="1dp"
+                android:drawableTop="@drawable/win_selected"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="@string/win"
+                android:textColor="@drawable/tabitem_text_seleced"
+                android:textSize="12sp" />
+
+            <CheckBox
+                android:id="@+id/find"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:button="@null"
+                android:checked="false"
+                android:drawablePadding="1dp"
+                android:drawableTop="@drawable/find_selected"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="@string/find"
+                android:textColor="@drawable/tabitem_text_seleced"
+                android:textSize="12sp" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white">
+
+                <CheckBox
+                    android:id="@+id/listing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@color/white"
+                    android:button="@null"
+                    android:checked="false"
+                    android:drawablePadding="1dp"
+                    android:drawableTop="@drawable/listing_selected"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/list"
+                    android:textColor="@drawable/tabitem_text_seleced"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/listCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="14dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/list_count"
+                    android:gravity="center"
+                    android:minHeight="15dp"
+                    android:minWidth="15dp"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+
+            <CheckBox
+                android:id="@+id/user"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:button="@null"
+                android:checked="false"
+                android:drawablePadding="1dp"
+                android:drawableTop="@drawable/user_selected"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="@string/user"
+                android:textColor="@drawable/tabitem_text_seleced"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tabView" />
+
+
+</RelativeLayout>

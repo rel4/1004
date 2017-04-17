@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/base_selected"
+    android:paddingBottom="10dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp">
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:button="@drawable/shoppingcart_item_selected"
+        android:checked="false"
+        android:focusable="false"
+        android:clickable="false"
+        android:gravity="center" />
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/produceImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@id/checkbox"
+        android:src="@mipmap/img_blank" />
+
+    <ImageView
+        android:id="@+id/tenImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/checkbox"
+        android:src="@mipmap/ten_image" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@id/addList"
+        android:layout_toRightOf="@id/produceImage"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/sd_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:singleLine="true"
+            android:text="123"
+            android:textColor="@color/list_title"
+            android:textSize="@dimen/lucknumber_size" />
+
+        <TextView
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/progress"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/sd_title"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:gravity="left"
+            android:text="@string/list_progress"
+            android:textColor="@color/list_item"
+            android:textSize="@dimen/lucknumber_size" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/progress"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/progress"
+                android:layout_alignParentLeft="true"
+                android:text="@string/buy_count" />
+
+            <ImageView
+                android:id="@+id/minus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:clickable="true"
+                android:paddingRight="5dp"
+                android:src="@mipmap/minus" />
+
+            <TextView
+                android:id="@+id/buy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="40dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@mipmap/buy_edit"
+                android:gravity="center"
+                android:maxLength="6"
+                android:clickable="true"
+                android:singleLine="true"
+                android:textColor="@color/buy_count"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:clickable="true"
+                android:paddingRight="5dp"
+                android:src="@mipmap/add" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

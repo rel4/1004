@@ -1,0 +1,273 @@
+<resources>
+    <string name="app_name">一元夺宝秒杀云购</string>
+    <string name="action_settings">Settings</string>
+    <string name="server">\"服务协议\"和\"用户须知\"、\"隐私权相关政策\".</string>
+    <string name="home">360夺宝</string>
+    <string name="win">最新揭晓</string>
+    <string name="find">发现</string>
+    <string name="list">清单</string>
+    <string name="user">我</string>
+    <string name="homeye">首页</string>
+    <string name="edit">编辑</string>
+    <string name="finish">完成</string>
+    <string name="delete">删除</string>
+    <string name="popular">人气</string>
+    <string name="newest">最新</string>
+    <string name="progress">进度</string>
+    <string name="remainder">总需人数</string>
+
+    <string name="category">分类</string>
+    <string name="ten_area">10元专区</string>
+    <string name="share">晒单</string>
+    <string name="shareknow">晒单须知</string>
+    <string name="problem">常见问题</string>
+    <string name="buy_progress">开奖进度 %1$d</string>
+
+    <string name="goods_buy">360夺宝</string>
+    <string name="issue">期号： %1$s</string>
+    <string name="total">总需%1$d人次</string>
+    <string name="addto">追加</string>
+    <string name="residue">剩余%1$d</string>
+    <string name="alladdshoppingcart">全部加入购物车</string>
+
+    <string name="list_progress">总需%1$s人次，剩余%2$d人次</string>
+    <string name="sure">确定</string>
+    <string name="cancel">取消</string>
+    <string name="updateBuyCount">修改购买数量</string>
+    <string name="buyhint">您购买的数量已超过最大值，自动调整为最大值</string>
+    <string name="delete_error">删除失败</string>
+    <string name="delete_success">删除成功</string>
+    <string name="delete_id">请选择要删除的商品</string>
+    <string name="delete_sure">您确认要删除商品吗？</string>
+
+
+    <string name="picture_detail">图文详情</string>
+    <string name="picture_detail_suggest">建议在wifi下查看</string>
+    <string name="win_ago">往期揭晓</string>
+    <string name="win_share">晒单分享</string>
+    <string name="detail_share">晒单详情</string>
+    <string name="detail_duobao">夺宝详情</string>
+    <string name="win_all_people">所有参与记录&#160;&#160;(自%1$s开始)</string>
+    <string name="join_people">参与了%1$s人次</string>
+    <string name="join_self">您参与了:%1$s人次</string>
+    <string name="no_join">您没有参与本期夺宝哦!</string>
+    <string name="number">夺宝号码:&#160;&#160;</string>
+    <string name="more_number">查看更多&#160;</string>
+    <string name="countdown_time">揭晓倒计时&#160;&#160;&#160;&#160;%1$s</string>
+    <string name="calculate_detial">计算详情</string>
+    <string name="win_people">获奖者</string>
+    <string name="luck_number">幸运号码：%1$s</string>
+    <string name="luck_name">获奖者：%1$s</string>
+    <string name="luck_id">用户ID：%1$s(唯一不变标识)</string>
+    <string name="luck_issue">期号：%1$s</string>
+    <string name="luck_jion_count">本期参与：%1$s人次</string>
+    <string name="luck_time">揭晓时间：%1$s</string>
+    <string name="addAllToList">全部加入清单</string>
+    <string name="outofdategoods">该商品以下架</string>
+    <string name="new_issue">新一期正在火热进行中...</string>
+    <string name="go_now">立即前往</string>
+    <string name="choose">人次期数选择</string>
+    <string name="add_issue">参与期号：%1$s</string>
+    <string name="end_now">即将揭晓，正在倒计时...</string>
+
+    <string name="money_hint">共%1$d人次，总共%2$d元(%3$d夺宝币)</string>
+    <string name="goods_people">总需%1$d人次，剩余%2$d人次</string>
+
+
+    <string name="shopping_cart_empty">你的清单空空如也</string>
+    <string name="go_buy">马上去夺宝</string>
+    <string name="shopping_total">共%1$d件商品，总计&#160;:&#160;%2$s夺宝币</string>
+    <string name="balance">结算</string>
+    <string name="buy_count">参与人次</string>
+    <string name="all">全选</string>
+    <string name="selected_count">共选择%1$d件商品</string>
+
+    <string name="win_issue">期&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;号：%1$s</string>
+    <string name="end_issue">期号：%1$s</string>
+    <string name="win_jion">参与人次：%1$s</string>
+    <string name="win_join_people">获&#160;&#160;得&#160;&#160;者：%1$s</string>
+    <string name="win_luck_number">幸运号码：%1$s</string>
+    <string name="win_time">揭晓时间：%1$s</string>
+    <string name="win_now">即将开奖</string>
+    <string name="user_center">个人中心</string>
+    <string name="userId">ID：%1$s</string>
+    <string name="calculate">正在计算中，请稍后</string>
+    <string name="calculate_error">服务器繁忙，请稍后</string>
+    <string name="calculate_in">计算中</string>
+    <string name="result_fail">获取结果失败</string>
+    <string name="pay_order">支付订单</string>
+    <string name="pay_result">支付结果</string>
+    <string name="order_list">商品合计</string>
+    <string name="order_money">%1$s夺宝币</string>
+    <string name="remainder_money">余额支付(余额：%1$s)</string>
+    <string name="other_order">其他支付方式</string>
+    <string name="pay_order_money_other">&#165;%1$s</string>
+    <string name="pay_order_sure">确认支付</string>
+    <string name="order_total">%1$s人次</string>
+    <string name="win_jion_count">本期参与：%1$s人次</string>
+    <string name="self_qishu">参与期数：%1$s</string>
+    <string name="self_total">总需：%1$s</string>
+    <string name="self_win_name">获得者：%1$s</string>
+    <string name="self_remainder">剩余：%1$d</string>
+    <string name="win_total">总需：%1$s人次</string>
+    <string name="win_join_issue">参与期号：%1$s</string>
+    <string name="win_join_recorde">参与期号：%1$s</string>
+    <string name="mynumber">查看我的号码</string>
+    <string name="othernumber">查看TA的号码</string>
+    <string name="addTo">追加</string>
+    <string name="toBuy">跟买</string>
+    <string name="addlistsuccess">加入清单成功</string>
+    <string name="addlistfail">加入清单失败</string>
+
+
+    <string name="all_log">全部夺宝记录</string>
+    <string name="red_packet">红包</string>
+    <string name="yuan_log">充值记录</string>
+    <string name="win_log">中奖记录</string>
+    <string name="shaidan_log">晒单</string>
+    <string name="firends">邀请好友</string>
+    <string name="sharefenxiang">晒单分享</string>
+    <string name="myshare">我的晒单</string>
+    <string name="set">设置</string>
+    <string name="like">猜你喜欢</string>
+    <string name="update">检查更新</string>
+    <string name="about">关于360夺宝</string>
+    <string name="clean_cache">清除缓存</string>
+    <string name="wish_list">心愿单</string>
+    <string name="duobao_log">夺宝记录</string>
+    <string name="exitLogin">退出登录</string>
+    <string name="injobnumber">参与人次</string>
+
+    <string name="addlist">加入清单</string>
+    <string name="winshare">中奖就要放肆晒!  拿晒单红包奖上将啦!</string>
+
+    <string name="pay_now">立即结算</string>
+
+
+    <string name="title_activity_setting">SettingActivity</string>
+    <string name="title_activity_login">我的</string>
+    <string name="title_classfybrowse">分类浏览</string>
+    <string name="seach_Commodity">&#160;&#160;&#160;&#160;&#160;&#160;搜索您感兴趣的商品</string>
+    <string name="seach_hot">热门搜索</string>
+    <string name="all_Commodity">全部商品</string>
+
+    <string name="title_activity_classfy">分类</string>
+    <string name="title_activity_ten_rmb">10元专区</string>
+    <string name="title_activity_bask">善待</string>
+    <string name="title_activity_question">常见问题</string>
+    <string name="title_activity_notify">通知</string>
+    <string name="title_activity_search">搜索</string>
+    <string name="title_notify">通知</string>
+
+
+    <string name="neterror_load">正在加载中...</string>
+    <string name="nodata">抱歉，暂时还没有数据</string>
+    <string name="reload">重新加载</string>
+    <string name="load_error">加载失败，点击重新加载</string>
+    <string name="loading">正在加载中，请稍后</string>
+
+    <string name="gohome">立即夺宝</string>
+    <string name="lookDetail">继续滑动查看图文详情</string>
+
+    <string name="count_detail">计算详情</string>
+    <string name="activity_goods_detail">商品详情</string>
+    <string name="back_home">返回主页</string>
+    <string name="login">登录</string>
+    <string name="morelogin">    或使用以下方式登录    </string>
+    <string name="more">更多</string>
+    <string name="register">注册</string>
+    <string name="phone_register">手机号码注册</string>
+    <string name="phoneregister">通过手机号注册</string>
+    <string name="phone">手机号码:</string>
+    <string name="password">密码:</string>
+    <string name="pswd">密码</string>
+    <string name="hint">6位-12位数字、字母或下划线组成</string>
+    <string name="findhint">请设置新的密码</string>
+    <string name="incode">输入验证码</string>
+    <string name="getcode">获取验证码</string>
+    <string name="save">保存</string>
+    <string name="registerOK">注册成功</string>
+    <string name="goLogin">马上登录</string>
+    <string name="my">我的</string>
+    <string name="forgetpswd">忘记密码?</string>
+    <string name="acc">手机号码</string>
+    <string name="snatch">立即夺宝</string>
+    <string name="snatchtime">夺宝时间</string>
+    <string name="tuwen">图文详情</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_register_ok">RegisterOKActivity</string>
+    <string name="title_activity_number">夺宝号码</string>
+    <string name="title_activity_t__wparticulars">T_WParticularsActivity</string>
+    <string name="title_activity_snatch_log">SnatchLogActivity</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_recharge_record">RechargeRecordActivity</string>
+    <string name="title_activity_win_record">WinRecordActivity</string>
+    <string name="title_activity_share_self">ShareSelfActivity</string>
+    <string name="title_activity_recharge">RechargeActivity</string>
+
+
+    <string name="recharge">充值</string>
+    <string name="recharge_result">支付结果</string>
+    <string name="rechargesuccessfirst">恭喜您，充值成功！</string>
+    <string name="rechargesuccesssec">请等待系统为您揭晓！</string>
+    <string name="rechargesuccessthird">现在您可以：</string>
+    <string name="rechargesuccessthirds">以便中奖接收短信通知。</string>
+    <string name="rechargerecodes">充值记录</string>
+    <string name="recharge_way">选择支付方式</string>
+    <string name="recharge_choose">选择充值金额（元）</string>
+    <string name="recharge_way_weixin">微信支付</string>
+    <string name="recharge_way_zhifubao">支付宝</string>
+
+    <string name="recharge_way_jdpay">京东支付</string>
+    <string name="recharge_way_aibei">爱贝支付</string>
+    <string name="recharge_way_hfb">汇付宝支付</string>
+
+    <string name="recharge_way_wangyibao">网易宝</string>
+    <string name="recharge_way_other">其他</string>
+    <string name="recharge_ensurepay">确认支付</string>
+    <string name="recharge_continuesuperise">开始夺宝</string>
+    <string name="recharge_firstpay">首次支付送惊喜红包</string>
+    <string name="recharge_explain">充值获得夺宝币（1元=1夺宝币），可用于夺宝，充值的款项将无法退回。</string>
+    <string name="symbol">&#165;</string>
+    <string name="rechargerecodes_bottom">已到达列表底部- 。-！</string>
+
+    <string name="personaldata_nickname_amend">修改昵称</string>
+    <string name="personaldata_telnum_amend">修改手机号码</string>
+    <string name="personaldata_telnum_input">输入手机号码</string>
+    <string name="title_activity_my_share">MyShareActivity</string>
+    <string name="you_no_log">你还没有晒单记录</string>
+
+    <string name="sheng_p">请选择省份</string>
+    <string name="shi_p">请选择市</string>
+    <string name="arear_p">请选择县/区</string>
+    <string name="title_activity_forget_pass_world">ForgetPassWorldActivity</string>
+    <string name="passwordfind">密码找回</string>
+    <string name="title_activity_snatch_details">SnatchDetailsActivity</string>
+    <string name="title_activity_see_number_details">SeeNumberDetailsActivity</string>
+    <string name="title_activity_more_number">MoreNumberActivity</string>
+    <string name="number_duobao">夺宝号码</string>
+    <string name="title_activity_share_know">ShareKnowActivity</string>
+    <string name="title_activity_issue_share">IssueShareActivity</string>
+    <string name="issueshare">发布晒单</string>
+    <string name="pswdfind">找回密码</string>
+    <string name="pswdfindok">找回密码成功!</string>
+    <string name="title_activity_login_window">LoginWindowActivity</string>
+
+
+    <string name="wx_login">微信登录</string>
+    <string name="title_activity_base_web_view">BaseWebViewActivity</string>
+
+
+    <string name="md__drawerOpenIndicatorDesc">Close drawer</string>
+
+    <string name="md__drawerClosedIndicatorDesc">Open drawer</string>
+    <string name="title_activity_world_ranking">WorldRankingActivity</string>
+    <string name="location">收货地址</string>
+    <string name="world">全球排名(前100名)</string>
+    <string name="title_activity_new_search">NewSearchActivity</string>
+    <string name="hot">热门推荐</string>
+    <string name="hotclassfy">热门分类</string>
+    <string name="title_activity_pay_result_show">PayResultShowActivity</string>
+
+</resources>

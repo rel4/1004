@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white">
+
+
+    <ImageView
+        android:id="@+id/img_default"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/img_blank" />
+
+    <ImageView
+        android:id="@+id/img_ten"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:src="@mipmap/ten_image" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_default"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:text="AppleIPhone6s ..."
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_issue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:text="期号：21343214"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/img_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_issue"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:src="@mipmap/ic_revealing2" />
+
+    <TextView
+        android:id="@+id/tv_kaijiang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/img_time"
+        android:layout_toEndOf="@+id/img_ten"
+        android:layout_toRightOf="@+id/img_ten"
+        android:gravity="center_vertical"
+        android:text="即将开奖"
+        android:textColor="#e12e49" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_kaijiang"
+        android:layout_marginLeft="15dp"
+        android:gravity="center_vertical"
+        android:text="01:23:45"
+        android:textColor="#e12e49"
+        android:textSize="25sp" />
+
+</RelativeLayout>

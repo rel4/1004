@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.hongbaogou.view.loadmoregridview.LoadMoreGridViewContainer
+        android:id="@+id/load_more_grid_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <com.hongbaogou.view.loadmoregridview.GridViewWithHeaderAndFooter
+            android:id="@+id/gridView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:descendantFocusability="blocksDescendants"
+            android:background="@color/home_gridview_bg"
+            android:horizontalSpacing="@dimen/home_gridview_dividing_line"
+            android:numColumns="2"
+            android:overScrollMode="never"
+            android:verticalSpacing="@dimen/home_gridview_dividing_line" />
+
+        <com.hongbaogou.view.NetErrorView
+            android:id="@+id/netErrorView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.hongbaogou.view.loadmoregridview.LoadMoreGridViewContainer>
+
+
+</LinearLayout>

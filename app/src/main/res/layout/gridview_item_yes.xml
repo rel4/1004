@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/win_grid_height"
+    android:background="@drawable/base_selected"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/produceImage"
+        android:layout_width="@dimen/home_grid_img"
+        android:layout_height="@dimen/home_grid_img"
+        android:paddingTop="3dp"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/img_ten"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@mipmap/ten_image" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/produceImage"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="jaty"
+        android:textColor="@color/win_title"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tv_issue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tv_title"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="@string/win_issue"
+        android:textColor="@color/home_gridview_item_progress_tx"
+        android:textSize="12sp" />
+
+
+    <!-- 获奖者布局  开始-->
+    <TextView
+        android:id="@+id/tv_holder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_issue"
+        android:layout_alignStart="@+id/tv_issue"
+        android:layout_below="@+id/tv_issue"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="@string/win_join_people"
+        android:textColor="@color/home_gridview_item_progress_tx"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_peoplen_umber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_holder"
+        android:layout_alignStart="@+id/tv_holder"
+        android:layout_below="@+id/tv_holder"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="@string/win_jion"
+        android:textColor="@color/home_gridview_item_progress_tx"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_lucknumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_peoplen_umber"
+        android:layout_alignStart="@+id/tv_peoplen_umber"
+        android:layout_below="@+id/tv_peoplen_umber"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="@string/win_luck_number"
+        android:textColor="@color/home_gridview_item_progress_tx"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_lucknumber"
+        android:layout_alignStart="@+id/tv_lucknumber"
+        android:layout_below="@+id/tv_lucknumber"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="@string/win_time"
+        android:textColor="@color/home_gridview_item_progress_tx"
+        android:textSize="12sp" />
+    <!-- 获奖者布局  结束-->
+
+
+    <!-- 倒计时布局  开始-->
+
+    <TextView
+        android:id="@+id/endIssue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="@string/win_issue"
+        android:textColor="@color/home_gridview_item_progress_tx"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/endIssue"
+        android:layout_alignStart="@+id/endIssue"
+        android:layout_below="@+id/endIssue"
+        android:layout_marginTop="5dp"
+        android:drawableLeft="@mipmap/countdowntime"
+        android:drawablePadding="3dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="@string/win_now"
+        android:textColor="@color/goods_detail_countdown_bg"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/countDownTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/time"
+        android:layout_alignStart="@+id/time"
+        android:layout_below="@+id/time"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="09:30:24"
+        android:textColor="@color/goods_detail_countdown_bg"
+        android:textSize="28sp"
+        android:visibility="gone" />
+    <!-- 倒计时布局  结束-->
+
+</RelativeLayout>

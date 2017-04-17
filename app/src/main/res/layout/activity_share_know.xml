@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:fitsSystemWindows="true"
+    tools:context="com.hongbaogou.activity.ShareKnowActivity">
+
+    <include
+        android:id="@+id/layout_title"
+        layout="@layout/base_actionbar" />
+
+    <ImageView
+        android:id="@+id/shareknow_img"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/layout_title"
+        android:scaleType="fitXY"
+        android:src="@mipmap/shareknow" />
+
+    <TextView
+        android:id="@+id/share"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shareknow_img"
+        android:padding="10dp"
+        android:text="晒单须知" />
+
+    <RelativeLayout
+        android:id="@+id/konw_layout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/share"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/know1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle"
+            android:gravity="center"
+            android:paddingBottom="1dp"
+            android:text="1"
+            android:textColor="@color/color_white" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toEndOf="@+id/know1"
+            android:layout_toRightOf="@+id/know1"
+            android:text="内容详细" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView11"
+            android:layout_alignStart="@+id/textView11"
+            android:layout_below="@+id/textView11"
+            android:padding="5dp"
+            android:text="详细是晒单的精华。建议您的晒单不少于30个字，提供3张以上不同的照片，跪求高清无码)" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/konw_layout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/konw_layout1"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/know2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle"
+            android:gravity="center"
+            android:paddingBottom="1dp"
+            android:text="2"
+            android:textColor="@color/color_white" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toEndOf="@+id/know2"
+            android:layout_toRightOf="@+id/know2"
+            android:text="真实" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView12"
+            android:layout_alignStart="@+id/textView12"
+            android:layout_below="@+id/textView12"
+            android:padding="5dp"
+            android:text="真实是晒单的灵魂。因此，您可以将快递单号也晒上来哦~(快递单伤的个人隐私部分，建议您马赛克处理下)" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/konw_layout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/konw_layout2"
+        android:layout_centerHorizontal="true"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle"
+            android:gravity="center"
+            android:paddingBottom="1dp"
+            android:text="3"
+            android:textColor="@color/color_white" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toEndOf="@+id/textView13"
+            android:layout_toRightOf="@+id/textView13"
+            android:text="传奇show" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView14"
+            android:layout_alignStart="@+id/textView14"
+            android:layout_below="@+id/textView14"
+            android:padding="5dp"
+            android:text="大家都喜欢沾仙气呢。因此，您能够处境和商品合个影儿什么的，给大家一起膜拜就再好不过了。" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/konw_layout3"
+        android:gravity="center"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/go_share"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView15"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/addto_bg"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="开始晒单"
+        android:textColor="@color/color_white" />
+
+</RelativeLayout>

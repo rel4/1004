@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.hongbaogou.view.headviewpage.HeadViewPager
+            android:id="@+id/bannerPager"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:background="@color/white"
+            android:paddingTop="10dp" />
+
+        <ImageView
+            android:id="@+id/tenImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:src="@mipmap/ten_image" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/dots"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"></LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/add_list"
+            android:gravity="center"
+            android:textColor="@color/win_state"
+            android:textSize="@dimen/home_category_tx" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/state"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:textColor="@color/goods_name"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <!--进行中布局  开始-->
+    <TextView
+        android:id="@+id/goingIssue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="@string/issue"
+        android:textColor="@color/issue_tx_color"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_marginTop="5dp"
+        android:max="100"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:progress="40"
+        android:progressDrawable="@drawable/progressbar_color"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/totalAndremainder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:gravity="left"
+            android:text="@string/total"
+            android:textColor="@color/issue_tx_color"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/remainder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="5dp"
+            android:gravity="right"
+            android:text="@string/residue"
+            android:textColor="@color/issue_tx_color"
+            android:textSize="14sp" />
+    </RelativeLayout>
+    <!--进行中布局  结束-->
+
+    <!--倒计时布局  开始-->
+    <RelativeLayout
+        android:id="@+id/countDownLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/goods_detail_countdown_bg"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/countDownIssue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/countDownTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/calculate_bg"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="calculateDetial"
+            android:paddingBottom="4dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="4dp"
+            android:text="@string/calculate_detial"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+    </RelativeLayout>
+    <!--倒计时布局  结束-->
+
+    <!--中奖者布局  开始-->
+    <TextView
+        android:id="@+id/win_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/win_top_bg"
+        android:gravity="center"
+        android:paddingBottom="4dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="4dp"
+        android:text="@string/win_people"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/win_user_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:onClick="winMessage"
+        android:clickable="true"
+        android:background="@color/luck_bg"
+        android:visibility="gone">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/produceImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="3dp"
+            android:src="@mipmap/img_blank" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/produceImage"
+            android:orientation="vertical"
+            android:paddingBottom="8dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:id="@+id/win_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textColor="@color/luck_tx"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/win_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textColor="@color/luck_tx"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/win_issue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textColor="@color/luck_tx"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/win_jion_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textColor="@color/luck_tx"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/win_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textColor="@color/luck_tx"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/win_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/win_bottom_bg"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/win_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/calculate_bg"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="calculateDetial"
+            android:paddingBottom="4dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="4dp"
+            android:text="@string/calculate_detial"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+
+    </RelativeLayout>
+
+    <!--中奖者布局  结束-->
+
+    <!--幸运号码 开始-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/win_no_tx"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:id="@+id/no_join"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="@string/no_join"
+            android:textColor="@color/issue_tx_color"
+            android:textSize="13sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/joinCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:gravity="left"
+            android:text="@string/join_people"
+            android:textColor="@color/issue_tx_color"
+            android:textSize="13sp"
+            android:visibility="gone" />
+
+        <TableLayout
+            android:id="@+id/luckNumbers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginRight="@dimen/lucknumber_marginright"
+                    android:gravity="left"
+                    android:text="@string/number"
+                    android:textColor="@color/issue_tx_color"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/luckNumber1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginLeft="@dimen/lucknumber_marginright"
+                    android:layout_marginRight="@dimen/lucknumber_marginright"
+                    android:gravity="left"
+                    android:textColor="@color/issue_tx_color"
+                    android:textSize="13sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/luckNumber2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="3"
+                    android:layout_marginLeft="@dimen/lucknumber_marginright"
+                    android:layout_marginRight="@dimen/lucknumber_marginright"
+                    android:gravity="left"
+                    android:textColor="@color/issue_tx_color"
+                    android:textSize="13sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/luckNumber3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:layout_marginLeft="@dimen/lucknumber_marginright"
+                    android:gravity="left"
+                    android:textColor="@color/issue_tx_color"
+                    android:textSize="13sp"
+                    android:visibility="gone" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/luckNumber4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginRight="@dimen/lucknumber_marginright"
+                    android:gravity="left"
+                    android:textColor="@color/issue_tx_color"
+                    android:textSize="13sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/luckNumber5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginLeft="@dimen/lucknumber_marginright"
+                    android:layout_marginRight="@dimen/lucknumber_marginright"
+                    android:gravity="left"
+                    android:textColor="@color/issue_tx_color"
+                    android:textSize="13sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/luckNumber6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="3"
+                    android:layout_marginLeft="@dimen/lucknumber_marginright"
+                    android:layout_marginRight="@dimen/lucknumber_marginright"
+                    android:gravity="left"
+                    android:textColor="@color/issue_tx_color"
+                    android:textSize="13sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/moreLuckNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:layout_marginLeft="@dimen/lucknumber_marginright"
+                    android:clickable="true"
+                    android:gravity="left"
+                    android:onClick="moreNumber"
+                    android:text="@string/more_number"
+                    android:textColor="@color/join_name"
+                    android:textSize="13sp"
+                    android:visibility="gone" />
+            </TableRow>
+
+        </TableLayout>
+
+
+    </LinearLayout>
+    <!--幸运号码 结束-->
+
+    <!--=======================================================================-->
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/home_line" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/actionbar_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/base_selected"
+        android:clickable="true"
+        android:onClick="picture"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:gravity="right"
+            android:text="@string/picture_detail"
+            android:textColor="@color/win_tx"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:drawablePadding="5dp"
+            android:drawableRight="@mipmap/goods_right"
+            android:gravity="right"
+            android:text="@string/picture_detail_suggest"
+            android:textColor="@color/home_gridview_item_progress_tx"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="10dp"
+        android:background="@color/actionbar_line" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/base_selected"
+        android:clickable="true"
+        android:drawablePadding="5dp"
+        android:drawableRight="@mipmap/goods_right"
+        android:gravity="left"
+        android:onClick="winAgo"
+        android:paddingBottom="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp"
+        android:text="@string/win_ago"
+        android:textColor="@color/win_tx"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="10dp"
+        android:background="@color/actionbar_line" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/base_selected"
+        android:clickable="true"
+        android:drawablePadding="5dp"
+        android:drawableRight="@mipmap/goods_right"
+        android:gravity="left"
+        android:onClick="share"
+        android:paddingBottom="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp"
+        android:text="@string/win_share"
+        android:textColor="@color/win_tx"
+        android:textSize="16sp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/actionbar_line" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="@color/home_line" />
+
+    <TextView
+        android:id="@+id/startTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:gravity="left"
+        android:paddingBottom="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:textColor="@color/win_tx"
+        android:textSize="16sp" />
+</LinearLayout>

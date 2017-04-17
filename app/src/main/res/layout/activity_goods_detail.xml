@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.hongbaogou.activity.GoodsDetailActivity">
+
+    <RelativeLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/actionbar_bg">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/actionbar_press"
+            android:onClick="back"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:src="@mipmap/back" />
+
+        <ImageView
+            android:id="@+id/menuItem"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/actionbar_press"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:visibility="visible" />
+        <ImageView
+            android:id="@+id/share"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:scaleType="centerCrop"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/img_share"
+            android:layout_marginRight="15dp"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toLeftOf="@id/menuItem"
+            android:layout_toRightOf="@+id/back"
+            android:gravity="left"
+            android:singleLine="true"
+            android:textColor="@color/actionbar_title"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/actiobar_line"
+            android:layout_alignParentBottom="true"
+            android:background="@color/actionbar_line" />
+    </RelativeLayout>
+
+
+    <com.hongbaogou.view.NetErrorView
+        android:id="@+id/netErrorView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/action_bar" />
+
+    <RelativeLayout
+        android:id="@+id/bottomView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:visibility="visible">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/actionbar_line" />
+
+        <ImageView
+            android:id="@+id/shoppingcar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:clickable="true"
+            android:onClick="addToShoppingCart"
+            android:src="@mipmap/goods_listing"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/listCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="17dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/list_count"
+            android:gravity="center"
+            android:minHeight="15dp"
+            android:minWidth="15dp"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_toLeftOf="@id/shoppingcar"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/addToList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@mipmap/goods_buy"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="showPopwindow"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/goods_buy"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/goods_addlist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/shoppingcar"
+                android:layout_toRightOf="@id/addToList"
+                android:layout_weight="1"
+                android:background="@mipmap/goods_addlist"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="showPopwindow"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/addlist"
+                android:textColor="@color/goods_addlist"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/stop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:text="@string/outofdategoods"
+            android:textColor="@color/win_tx"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:text="@string/new_issue"
+            android:textColor="@color/win_tx"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/goNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@mipmap/goods_buy"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="goNewIssue"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/go_now"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+    <com.hongbaogou.view.refresh.PtrClassicFrameLayout xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/refreshView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomView"
+        android:layout_below="@id/netErrorView"
+        android:descendantFocusability="blocksDescendants"
+        cube_ptr:ptr_duration_to_close="400"
+        cube_ptr:ptr_duration_to_close_header="400"
+        cube_ptr:ptr_keep_header_when_refresh="true"
+        cube_ptr:ptr_pull_to_fresh="false"
+        cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+        cube_ptr:ptr_resistance="2.4">
+
+        <com.hongbaogou.view.loadmoregridview.LoadMoreListViewContainer
+            android:id="@+id/load_more_listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/home_line">
+
+            <com.hongbaogou.view.ViewpagerInListView
+                android:id="@+id/joinPeopleList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/home_line"
+                android:divider="@null"
+                android:overScrollMode="never" />
+
+
+        </com.hongbaogou.view.loadmoregridview.LoadMoreListViewContainer>
+
+    </com.hongbaogou.view.refresh.PtrClassicFrameLayout>
+
+</RelativeLayout>

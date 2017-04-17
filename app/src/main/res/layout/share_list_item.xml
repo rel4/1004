@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.hongbaogou.view.circleimageview.CircleImageView
+        android:id="@+id/img_icon"
+        android:layout_width="@dimen/iconimg"
+        android:layout_height="@dimen/iconimg"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/coin"
+        app:civ_border_color="@color/color_blank"
+        app:civ_border_width="1dp" />
+
+
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/img_icon"
+        android:layout_marginRight="10dp" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/img_icon"
+        android:layout_toEndOf="@+id/img_icon"
+        android:layout_toRightOf="@+id/img_icon"
+        android:lines="1"
+        android:maxLength="14"
+        android:padding="3dp"
+        android:singleLine="true"
+        android:textColor="@color/color_red" />
+
+
+    <RelativeLayout
+        android:id="@+id/layout_goods"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/username"
+        android:layout_alignStart="@+id/username"
+        android:layout_below="@+id/username"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/share_bj">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="17dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:lines="1"
+            android:singleLine="true"
+            android:textColor="@color/color_black" />
+
+        <TextView
+            android:id="@+id/goods"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/title"
+            android:layout_below="@+id/title"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/color_gray"
+            android:textSize="@dimen/lucknumber_size" />
+
+        <TextView
+            android:id="@+id/qihao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/goods"
+            android:layout_alignStart="@+id/goods"
+            android:layout_below="@+id/goods"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp"
+            android:textColor="@color/color_gray"
+            android:textSize="@dimen/lucknumber_size" />
+
+        <TextView
+            android:id="@+id/comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/qihao"
+            android:layout_alignStart="@+id/qihao"
+            android:layout_below="@+id/qihao"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/pay_way"
+            android:textSize="@dimen/lucknumber_size" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/qihao"
+            android:layout_alignStart="@+id/qihao"
+            android:layout_below="@+id/comment"
+            android:paddingBottom="10dp">
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/img_1"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/share_img_size"
+                android:layout_weight="1"
+                android:scaleType="fitXY" />
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/img_2"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/share_img_size"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:scaleType="fitXY" />
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/img_3"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/share_img_size"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:scaleType="fitXY" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="110dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            android:background="@color/color_green"
+            android:padding="2dp"
+            android:text="已审核"
+            android:textColor="@color/color_white"
+            android:textSize="8sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginRight="40dp"
+                android:layout_toLeftOf="@+id/time"
+                android:singleLine="true"
+                android:text="居然真的中了,太幸福了"
+                android:textSize="@dimen/lucknumber_size" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/title"
+                android:layout_centerVertical="true"
+                android:text="2015-11-01 22:45"
+                android:textSize="10sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp">
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/goods_img"
+                android:layout_width="@dimen/my_share_img_width"
+                android:layout_height="@dimen/my_share_img_height"
+                android:layout_marginRight="10dp" />
+
+            <TextView
+                android:id="@+id/goodstitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/goods_img"
+                android:layout_toRightOf="@+id/goods_img"
+                android:text="Apple iPhone6s 16G 颜色随机"
+                android:textColor="@color/color_red"
+                android:textSize="@dimen/lucknumber_size" />
+
+            <TextView
+                android:id="@+id/comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/goodstitle"
+                android:layout_below="@+id/goodstitle"
+                android:layout_marginTop="5dp"
+                android:maxLines="2"
+                android:text="怕了噼里啪啦霹雳啪怕了噼里啪啦霹雳啪"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/lucknumber_size" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

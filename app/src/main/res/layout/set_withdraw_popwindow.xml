@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:paddingLeft="15dp"
+            android:id="@+id/pop_iv_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="17dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/back" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/pop_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="输入提现密码"
+
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+    <include layout="@layout/split_line" />
+
+
+    <EditText
+        android:layout_marginTop="20dp"
+        android:id="@+id/edt_input_password"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/yuanjiao_setting_password"
+        android:inputType="textPassword"
+        android:singleLine="true"
+        android:textColor="@color/mine_text_color3"
+        android:textColorHint="@color/mine_text_color3"
+        android:textSize="13.3dp"/>
+
+    <Button
+        android:id="@+id/btn_next_action"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/selector_yuanjiao"
+        android:text="确定"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="15dp"/>
+
+</LinearLayout>

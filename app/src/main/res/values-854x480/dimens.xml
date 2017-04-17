@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="home_gridview_dividing_line">1dp</dimen>
+
+    <dimen name="home_category_img">32dp</dimen>
+    <dimen name="home_category_tx">12sp</dimen>
+    <dimen name="home_grid_img">80dp</dimen>
+
+    <dimen name="lucknumber_marginright">8dp</dimen>
+    <dimen name="lucknumber_size">12sp</dimen>
+
+    <dimen name="share_title_size">13sp</dimen>
+
+    <dimen name="iconimg">60dp</dimen>
+
+    <dimen name="namesize">12sp</dimen>
+
+    <dimen name="win_grid_height">185dp</dimen>
+
+    <dimen name="share_img_size">75dp</dimen>
+
+    <dimen name="my_share_img_height">75dp</dimen>
+    <dimen name="my_share_img_width">80dp</dimen>
+
+    <dimen name="classfy_margin_top">10dp</dimen>
+
+    <dimen name="icon_margin">10dp</dimen>
+
+    <dimen name="udloadImg">74dp</dimen>
+    <dimen name="dialogHeight">80dp</dimen>
+
+    <dimen name="numberSize">12sp</dimen>
+</resources>

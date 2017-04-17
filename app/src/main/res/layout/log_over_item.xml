@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white">
+
+    <ImageView
+        android:id="@+id/img_goods"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:src="@mipmap/img_blank" />
+
+    <TextView
+        android:id="@+id/sd_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="11dp"
+        android:layout_toEndOf="@+id/img_goods"
+        android:layout_toRightOf="@+id/img_goods"
+        android:text="小米插线板" />
+
+    <TextView
+        android:id="@+id/qishu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/sd_title"
+        android:layout_alignStart="@+id/sd_title"
+        android:layout_below="@+id/sd_title"
+        android:text="参与期号:88888888" />
+
+    <TextView
+        android:id="@+id/totlenumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/qishu"
+        android:layout_toEndOf="@+id/img_goods"
+        android:layout_toRightOf="@+id/img_goods"
+        android:text="总需:5888" />
+
+    <TextView
+        android:id="@+id/canyurenshu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/totlenumber"
+        android:layout_toEndOf="@+id/img_goods"
+        android:layout_toRightOf="@+id/img_goods"
+        android:text="本期参与:5人次" />
+
+    <TextView
+        android:id="@+id/mynumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/canyurenshu"
+        android:layout_marginRight="5dp"
+        android:text="查看我的号码"
+        android:textColor="@color/color_blue" />
+
+    <LinearLayout
+        android:id="@+id/goods_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/canyurenshu"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/img_goods"
+        android:layout_toRightOf="@+id/img_goods"
+        android:background="@color/color_gray"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/winer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="获得者:XXX" />
+
+        <TextView
+            android:id="@+id/peoplenumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/sd_title"
+            android:layout_alignStart="@+id/sd_title"
+            android:layout_below="@+id/sd_title"
+            android:text="本期参与:100人次" />
+
+        <TextView
+            android:id="@+id/lucknumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/totlenumber"
+            android:layout_alignRight="@+id/totlenumber"
+            android:layout_below="@+id/sd_title"
+            android:text="幸运号码:10000235" />
+
+        <TextView
+            android:id="@+id/endtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/totlenumber"
+            android:layout_alignRight="@+id/totlenumber"
+            android:layout_below="@+id/sd_title"
+            android:text="揭晓事件:2015-12-12 20:04:00" />
+    </LinearLayout>
+
+</RelativeLayout>

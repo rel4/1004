@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="10dp">
+
+    <ImageView
+        android:id="@+id/tenImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:src="@mipmap/ten_image" />
+
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/produceImage"
+        android:layout_width="@dimen/goods_produceimg"
+        android:layout_height="@dimen/goods_produceimg"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:src="@mipmap/img_blank" />
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/produceImage"
+        android:ellipsize="end"
+        android:lineSpacingExtra="2dp"
+        android:lines="2"
+        android:textColor="@color/win_title"
+        android:textSize="13sp" />
+
+
+    <TextView
+        android:id="@+id/zongrenshu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/title"
+        android:layout_below="@id/title"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/issue_tx_color"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/qishu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/zongrenshu"
+        android:layout_below="@+id/zongrenshu"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/issue_tx_color"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/luckNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/qishu"
+        android:layout_below="@id/qishu"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/issue_tx_color"
+        android:textSize="12sp" />
+
+
+    <TextView
+        android:id="@+id/renci"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/luckNumber"
+        android:layout_below="@id/luckNumber"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/issue_tx_color"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/end_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/renci"
+        android:layout_below="@+id/renci"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/issue_tx_color"
+        android:textSize="12sp" />
+
+
+</RelativeLayout>
+
+
+

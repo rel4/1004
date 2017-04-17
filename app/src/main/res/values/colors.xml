@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#303F9F</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="main_checkBox_text_selected">#DA4554</color>
+    <color name="main_checkBox_text">#898A8A</color>
+    <color name="white">#ffffff</color>
+    <color name="press">#f2f2f2</color>
+    <color name="black">#000000</color>
+    <color name="black_bj">#DD000000</color>
+    <color name="main_title">#3D4345</color>
+    <color name="list_edit">#DC4F5D</color>
+    <color name="shopping_cart_count">#4D4D4D</color>
+    <color name="actionbar_press">#e5e5e5</color>
+
+    <color name="home_line">#F1EEEC</color>
+    <color name="home_gridview_bg">#E9E9E9</color>
+    <color name="home_head_tx">#626262</color>
+    <color name="home_win_tx">#6B6B6B</color>
+    <color name="home_sort_tx_selected">#D93E4E</color>
+    <color name="home_sort_tx">#616161</color>
+    <color name="home_gridview_tx">#2E2E2E</color>
+    <color name="home_gridview_item_progress_tx">#9C9C9C</color>
+    <color name="home_gridview_item_addList">#DD5160</color>
+    <color name="goods_addlist">#D62F40</color>
+    <color name="win_state">#DB4957</color>
+    <color name="goods_name">#515151</color>
+    <color name="issue_tx_color">#999999</color>
+    <color name="win_no_tx">#F3F3F3</color>
+    <color name="win_tx">#5A5A5A</color>
+    <color name="win_line">#F9F7F6</color>
+    <color name="join_text">#504F4D</color>
+    <color name="join_name">#0F6FD3</color>
+    <color name="join_time">#9A9997</color>
+    <color name="join_count">#B44556</color>
+    <color name="join_line">#DBDCD7</color>
+    <color name="goods_detail_countdown_bg">#DA4453</color>
+    <color name="goods_detail_countdown_border">#E26E79</color>
+    <color name="luck_bg">#FBF3ED</color>
+    <color name="luck_tx">#A5A5A3</color>
+    <color name="win_username">#2D8EFC</color>
+    <color name="detail_color">#E14961</color>
+    <color name="goods_listSelector">#EBEBEB</color>
+    <color name="goods_list_title">#292F32</color>
+    <color name="goods_list_addAll">#D42133</color>
+    <color name="buy_count">#6A6A6A</color>
+    <color name="win_ago_center_line">#EAEAEA</color>
+    <color name="win_ago_issue">#4E4E4E</color>
+    <color name="win_ago_end_time">#F40000</color>
+    <color name="win_ago_userinfo">#949494</color>
+    <color name="win_list_divider">#F5F5F5</color>
+
+    <color name="color_blank">#00000000</color>
+    <color name="actionbar_bg">#F8F8F8</color>
+    <color name="actionbar_line">#CCCCCC</color>
+    <color name="actionbar_user_line">#afafaf</color>
+    <color name="bean_line">#edeeeb</color>
+    <color name="actionbar_title">#42474A</color>
+    <color name="list_title">#484848</color>
+    <color name="list_item">#595959</color>
+    <color name="win_title">#676767</color>
+    <color name="order_list">#565656</color>
+    <color name="order_money">#D73747</color>
+    <color name="pay_way">#4C4C4C</color>
+    <color name="order_list_bg">#FCF6EE</color>
+    <color name="order_list_border">#DFDFDF</color>
+    <color name="self_buy_title">#646464</color>
+    <color name="self_buy_going">#C83A52</color>
+    <color name="self_buy_win">#666666</color>
+    <color name="self_buy_in">#C33D55</color>
+    <color name="self_buy_luck_numner">#D8344D</color>
+    <color name="self_sliding_line">#DADADA</color>
+    <color name="list_total_color">#D93F4E</color>
+
+
+    <color name="color_qian_red">#EE99A7</color>
+    <color name="color_qian_blue">#1C82E8</color>
+    <color name="color_red">#DA364F</color>
+    <color name="color_black">#000000</color>
+    <color name="color_gray">#999999</color>
+    <color name="color_white">#ffffff</color>
+    <color name="color_qian">#f1eeec</color>
+    <color name="color_yellow">#88ffff00</color>
+    <color name="color_shen_red">#d1324d</color>
+    <color name="color_blue">#1474DA</color>
+    <color name="color_gray_shen">#DCDCDC</color>
+    <color name="color_gray_di">#DDDDDD</color>
+    <color name="color_share_blue">#1281FE</color>
+    <color name="color_signin">#32c423</color>
+    <color name="color_green">#149447</color>
+    <color name="color_red_fail">#C50909</color>
+    <color name="color_signin_red">#e73a3a</color>
+    <color name="color_loading">#FFFF00</color>
+    <color name="color_orange">#EC6C1B</color>
+    <color name="color_text">#8E8E8E</color>
+    <color name="color_popbg">#BB000000</color>
+    <color name="color_viewline">#F0EFF5</color>
+    <color name="color_tv_gray">#B5BBC3</color>
+
+    <color name="hint_color_title_line">#b2b2b2</color>
+    <color name="black_text_light">#666666</color>
+    <color name="hint_color">#efeff4</color>
+    <color name="black_text">#333333</color>
+    <color name="navpage">#FFE1E8EB</color>
+    <color name="color_app_main_home">#fb491f</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="split_line_color">#66cccccc</color>
+    <color name="mine_text_color3">#999999</color>
+    <color name="bg_Gray">#CCCCCC</color>
+    <color name="split_line_color2">#FFDCDCDC</color>
+    <color name="login_button_unpressed">#fb491f</color>
+
+
+
+</resources>

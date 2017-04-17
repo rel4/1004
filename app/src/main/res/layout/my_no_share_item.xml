@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:clickable="false"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/goodsimg"
+        android:layout_width="@dimen/my_share_img_width"
+        android:layout_height="@dimen/my_share_img_height"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:src="@mipmap/img_blank" />
+
+    <TextView
+        android:id="@+id/goodsdetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/goodsimg"
+        android:layout_toRightOf="@+id/goodsimg"
+        android:padding="5dp"
+        android:maxLines="3"
+        android:text="(期号:212063947)百草味 2包装|白芝麻猪肉铺180g 靖江特产零食小吃 特色肉干熟食"
+        android:textColor="@color/color_gray"
+        android:textSize="@dimen/lucknumber_size" />
+
+    <TextView
+        android:id="@+id/go_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/goodsdetails"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/goodsimg"
+        android:layout_toRightOf="@+id/goodsimg"
+        android:background="@drawable/addto_bg"
+        android:paddingBottom="3dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="3dp"
+        android:text="立即晒单"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/lucknumber_size" />
+
+
+</RelativeLayout>

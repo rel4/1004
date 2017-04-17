@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/actionbar_bg">
+
+
+
+        <ImageView
+            android:id="@+id/iv_detai_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/actionbar_press"
+            android:onClick="onClick"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:src="@mipmap/back" />
+
+        <ImageView
+            android:id="@+id/menuItem"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_recharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/actionbar_title"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_cash_record"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+
+        >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="申请时间"
+            android:gravity="center"
+            android:textColor="@color/actionbar_title"
+
+            />
+
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="微信号"
+            android:gravity="center"
+            android:textColor="@color/actionbar_title"
+
+            />
+
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="提现金额"
+            android:gravity="center"
+            android:textColor="@color/actionbar_title"
+
+            />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="提现状态"
+            android:gravity="center"
+            android:textColor="@color/actionbar_title"
+
+            />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_comm_record"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:visibility="visible"
+        >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="时间"
+            android:gravity="center"
+            android:textColor="@color/actionbar_title"
+
+            />
+
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="好友账号"
+            android:gravity="center"
+            android:textColor="@color/actionbar_title"
+
+            />
+
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="消费记录"
+            android:gravity="center"
+            android:textColor="@color/actionbar_title"
+
+            />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="所获佣金"
+            android:gravity="center"
+            android:textColor="@color/actionbar_title"
+
+            />
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_vitefriend_record"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:visibility="visible"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="用户名"
+            android:gravity="center"
+            android:textColor="@color/actionbar_title"
+
+            />
+
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="时间"
+            android:gravity="center"
+            android:textColor="@color/actionbar_title"
+
+            />
+
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="级别"
+            android:gravity="center"
+            android:textColor="@color/actionbar_title"
+
+            />
+
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+        <TextView
+            android:id="@+id/tv_null_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:text="暂无邀请好友明细，赶紧邀请好友吧"
+            android:gravity="center_horizontal"
+            android:visibility="gone"
+            android:paddingTop="60dp"
+            android:background="#F5F5F5"
+            android:textColor="#A7A7A7"
+            />
+
+
+          <com.hongbaogou.view.LoadMoreListView
+            android:id="@+id/lv_detail_record"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+              android:footerDividersEnabled="false"
+            ></com.hongbaogou.view.LoadMoreListView>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

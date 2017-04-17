@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp">
+
+
+    <ImageView
+        android:id="@+id/produceImage"
+        android:layout_width="@dimen/goods_produceimg"
+        android:layout_height="@dimen/goods_produceimg"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@mipmap/img_blank" />
+
+    <ImageView
+        android:id="@+id/tenImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:src="@mipmap/ten_image" />
+
+
+    <TextView
+        android:id="@+id/addto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/goods_details"
+        android:layout_toRightOf="@+id/goods_details"
+        android:background="@drawable/addto_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="5dp"
+        android:text="@string/save"
+        android:textColor="@color/color_white"
+        android:textSize="13sp" />
+
+    <LinearLayout
+        android:id="@+id/goods_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/produceImage"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/sd_title"
+            android:layout_width="wrap_content"
+            android:layout_height="14dp"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:gravity="left|top"
+            android:lines="2"
+            android:maxEms="15"
+            android:singleLine="true"
+            android:text="佳能(Canon)EOS 700D 单反套机卡上的恢复快累死的合法的克里斯"
+            android:textColor="@color/black"
+            android:textSize="@dimen/lucknumber_size" />
+
+        <TextView
+            android:id="@+id/qishu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/progress"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="5dp"
+            android:text="参与期数:213261235"
+            android:textSize="12sp" />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="6dp"
+            android:layout_below="@id/sd_title"
+            android:layout_marginTop="5dp"
+            android:indeterminate="false"
+            android:max="1000"
+            android:minWidth="150dp"
+            android:progress="40"
+            android:progressDrawable="@drawable/progressbar_color" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical">
+
+
+            <TextView
+                android:id="@+id/total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/progress"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/progress"
+                android:layout_centerInParent="true"
+                android:gravity="left"
+                android:text="@string/total"
+                android:textColor="@color/issue_tx_color"
+                android:textSize="@dimen/lucknumber_size" />
+
+            <TextView
+                android:id="@+id/remainder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignRight="@id/progress"
+                android:layout_below="@id/progress"
+                android:layout_marginLeft="30dp"
+                android:gravity="right"
+                android:text="@string/residue"
+                android:textColor="@color/issue_tx_color"
+                android:textSize="@dimen/lucknumber_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/canyurenshu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/goods_details"
+        android:layout_below="@+id/goods_details"
+        android:layout_marginTop="5dp"
+        android:text="本期参与:1人次"
+        android:textSize="@dimen/lucknumber_size" />
+
+    <TextView
+        android:id="@+id/lookmynumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/addto"
+        android:layout_below="@+id/goods_details"
+        android:layout_marginTop="5dp"
+        android:text="查看我的号码"
+        android:textColor="@color/color_blue"
+        android:textSize="@dimen/lucknumber_size" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/goods_details"
+        android:layout_below="@+id/canyurenshu"
+        android:layout_marginTop="5dp"
+        android:background="@color/color_gray_shen"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/winer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="获得者:XXX"
+            android:textSize="@dimen/lucknumber_size" />
+
+        <TextView
+            android:id="@+id/peoplenumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="本期参与:100人次"
+            android:textSize="@dimen/lucknumber_size" />
+
+        <TextView
+            android:id="@+id/lucknumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="幸运号码:10000235"
+            android:textSize="@dimen/lucknumber_size" />
+
+        <TextView
+            android:id="@+id/endtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="揭晓事件:2015-12-12 20:04:00"
+            android:textSize="@dimen/lucknumber_size" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

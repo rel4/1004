@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/main_checkBox_text_selected">
+
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:padding="15dp"
+            android:src="@mipmap/search" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:src="@mipmap/title_logo" />
+    </RelativeLayout>
+
+    <com.hongbaogou.view.refresh.PtrClassicFrameLayout xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/refreshView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        cube_ptr:ptr_duration_to_close="400"
+        cube_ptr:ptr_duration_to_close_header="400"
+        cube_ptr:ptr_keep_header_when_refresh="true"
+        cube_ptr:ptr_pull_to_fresh="false"
+        cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+        cube_ptr:ptr_resistance="2.4">
+
+
+        <com.cpoopc.scrollablelayoutlib.ScrollableLayout
+            android:id="@+id/scroll_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/top_container"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.hongbaogou.view.CustomViewPager
+                    android:id="@+id/vp_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <com.hongbaogou.view.PagerSlidingTabStrip
+                    android:id="@+id/tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#ffffff"
+                    app:pstsDividerColor="@color/transparent"
+                    app:pstsDividerPadding="9dp"
+                    app:pstsIndicatorColor="#ffffff"
+                    app:pstsIndicatorHeight="2dp"
+                    app:pstsUnderlineHeight="1dp"
+                    app:pstsUnderlineColor="@color/transparent"
+                    app:pstsShouldExpand="true"
+                    app:pstsTabPaddingLeftRight="17dp"
+                    app:selectedTabTextColor="@color/detail_color"  />
+                <View
+                    android:id="@+id/tab_line"
+                    android:layout_below="@+id/tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#AAAA"/>
+            </RelativeLayout>
+
+
+
+</com.cpoopc.scrollablelayoutlib.ScrollableLayout>
+
+</com.hongbaogou.view.refresh.PtrClassicFrameLayout>
+</LinearLayout>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    tools:context="com.hongbaogou.activity.WinRecordActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/actionbar_bg">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/actiobar_line"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/iv_winrecodes"
+                android:background="@color/actionbar_line" />
+
+            <ImageView
+                android:id="@+id/iv_winrecodes"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/actionbar_press"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:src="@mipmap/back" />
+
+            <ImageView
+                android:id="@+id/menuItem"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_recharge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toLeftOf="@id/menuItem"
+                android:layout_toRightOf="@+id/iv_winrecodes"
+                android:gravity="left"
+                android:singleLine="true"
+                android:text="中奖记录"
+                android:textColor="@color/actionbar_title"
+                android:textSize="18sp" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/actiobar_line"
+            android:layout_alignParentBottom="true"
+            android:background="@color/actionbar_line" />
+
+        <LinearLayout
+            android:id="@+id/ly_winrecord_no"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:src="@mipmap/winrecord_no" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.4"
+                    android:text="您还没有中奖记录"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btn_winrecord_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="0.6"
+                    android:background="@mipmap/winrecord_nobutton"
+                    android:onClick="onClick"
+                    android:text="立即夺宝"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="10dp"
+                android:text="猜你喜欢"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <com.hongbaogou.view.horizontallistview.HorizontalListView
+                android:id="@+id/horizontallistview"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.8"
+                android:background="@color/white"></com.hongbaogou.view.horizontallistview.HorizontalListView>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_winrecord"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="0.8"
+                android:background="@color/white"
+                android:paddingLeft="10dp"
+                android:visibility="gone"></android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+
+
+        <com.hongbaogou.view.refresh.PtrClassicFrameLayout xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/refreshView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView5"
+            android:descendantFocusability="blocksDescendants"
+            cube_ptr:ptr_duration_to_close="400"
+            cube_ptr:ptr_duration_to_close_header="400"
+            cube_ptr:ptr_keep_header_when_refresh="true"
+            cube_ptr:ptr_pull_to_fresh="false"
+            cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+            cube_ptr:ptr_resistance="2.4">
+
+            <com.hongbaogou.view.loadmoregridview.LoadMoreListViewContainer
+                android:id="@+id/load_more_listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/home_line">
+
+                <ListView
+                    android:id="@+id/lv_payrecodes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignTop="@+id/refreshView"
+                    android:background="@color/actionbar_bg"
+                    android:src="@mipmap/ten_image"
+                    android:visibility="invisible" />
+
+                <com.hongbaogou.view.NetErrorView
+                    android:id="@+id/netErrorView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"></com.hongbaogou.view.NetErrorView>
+
+
+            </com.hongbaogou.view.loadmoregridview.LoadMoreListViewContainer>
+
+        </com.hongbaogou.view.refresh.PtrClassicFrameLayout>
+
+    </LinearLayout>
+</ScrollView>

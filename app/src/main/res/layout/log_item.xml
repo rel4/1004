@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp"
+    android:clickable="true">
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/produceImage"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@mipmap/img_blank" />
+
+    <ImageView
+        android:id="@+id/tenImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:src="@mipmap/ten_image" />
+
+    <RelativeLayout
+        android:id="@+id/details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/produceImage"
+        android:layout_toRightOf="@+id/produceImage">
+
+        <TextView
+            android:id="@+id/addtobtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/addto_bg"
+            android:clickable="true"
+            android:paddingBottom="5dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="5dp"
+            android:textColor="@color/color_white"
+            android:textSize="13sp" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="0.5dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/addtobtn"
+            android:background="@color/color_gray_shen" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@id/line"
+            android:ellipsize="end"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:lineSpacingExtra="2dp"
+            android:maxLines="2"
+            android:textColor="@color/self_buy_title"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/qishu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_marginTop="3dp"
+            android:ellipsize="marquee"
+            android:lines="1"
+            android:maxEms="12"
+            android:singleLine="true"
+            android:textColor="@color/color_gray"
+            android:textSize="12sp" />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="6dp"
+            android:layout_alignLeft="@id/qishu"
+            android:layout_below="@id/qishu"
+            android:layout_marginTop="5dp"
+            android:indeterminate="false"
+            android:max="100"
+            android:minWidth="150dp"
+            android:progress="60"
+            android:progressDrawable="@drawable/progressbar_color" />
+
+
+        <TextView
+            android:id="@+id/totlenumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/progress"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/color_gray"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/remainder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/progress"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/totlenumber"
+            android:textColor="@color/color_gray"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/canyurenshu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/details"
+        android:layout_below="@+id/details"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/mynumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/canyurenshu"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/canyurenshu"
+        android:layout_toRightOf="@+id/canyurenshu"
+        android:clickable="true"
+        android:gravity="right"
+        android:textColor="@color/color_blue"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/countDownTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/canyurenshu"
+        android:layout_below="@id/canyurenshu"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="2dp"
+        android:gravity="left"
+        android:textColor="@color/self_buy_going"
+        android:textSize="13sp" />
+
+    <LinearLayout
+        android:id="@+id/winUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/details"
+        android:layout_below="@+id/countDownTime"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/actionbar_bg"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:id="@+id/winer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/self_buy_win"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/peoplenumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/self_buy_win"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/lucknumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/self_buy_win"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/endtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/self_buy_win"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

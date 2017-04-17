@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.hongbaogou.activity.InviteFriendMoreActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/actionbar_bg">
+
+            <View
+                android:layout_below="@+id/iv_invitecode_back"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/actiobar_line"
+                android:layout_alignParentBottom="true"
+                android:background="@color/actionbar_line" />
+
+            <ImageView
+                android:background="@drawable/actionbar_press"
+                android:id="@+id/iv_invitecode_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:src="@mipmap/back" />
+
+            <ImageView
+                android:id="@+id/menuItem"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_recharge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toLeftOf="@id/menuItem"
+                android:layout_toRightOf="@+id/iv_invitecode_back"
+                android:gravity="left"
+                android:singleLine="true"
+                android:text="奖励详情"
+                android:textColor="@color/actionbar_title"
+                android:textSize="18sp" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/actiobar_line"
+            android:layout_alignParentBottom="true"
+            android:background="@color/actionbar_line" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/actionbar_bg"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:paddingLeft="25dp"
+                android:paddingRight="10dp"
+                android:text="时间" />
+
+            <TextView
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="手机号码" />
+
+            <TextView
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="充值奖励" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/actiobar_line"
+            android:background="@color/color_shen_red" />
+
+        <Button
+            android:id="@+id/btn_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@mipmap/recharge_ensurepay"
+            android:onClick="onClick"
+            android:text="点击分享好友收徒"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <com.hongbaogou.view.refresh.PtrClassicFrameLayout xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/refreshView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants"
+            cube_ptr:ptr_duration_to_close="400"
+            cube_ptr:ptr_duration_to_close_header="400"
+            cube_ptr:ptr_keep_header_when_refresh="true"
+            cube_ptr:ptr_pull_to_fresh="false"
+            cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+            cube_ptr:ptr_resistance="2.4"
+            >
+
+            <com.hongbaogou.view.loadmoregridview.LoadMoreListViewContainer
+                android:id="@+id/load_more_listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/home_line">
+
+                <ListView
+                    android:id="@+id/lv_rewarddetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/actionbar_bg"
+                    android:padding="10dp" />
+
+                <com.hongbaogou.view.NetErrorView
+                    android:id="@+id/netErrorView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"></com.hongbaogou.view.NetErrorView>
+
+            </com.hongbaogou.view.loadmoregridview.LoadMoreListViewContainer>
+
+        </com.hongbaogou.view.refresh.PtrClassicFrameLayout>
+    </LinearLayout>
+</LinearLayout>
