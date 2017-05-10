@@ -3,10 +3,16 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/1004.iml" filepath="$PROJECT_DIR$/1004.iml" />
+      <module fileurl="file://$PROJECT_DIR$/1004.iml" filepath="$PROJECT_DIR$/1004.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IAppay/IAppay.iml" filepath="$PROJECT_DIR$/IAppay/IAppay.iml" />
       <module fileurl="file://$PROJECT_DIR$/IAppay/IAppay.iml" filepath="$PROJECT_DIR$/IAppay/IAppay.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/okhttputils/okhttputils.iml" filepath="$PROJECT_DIR$/okhttputils/okhttputils.iml" />
       <module fileurl="file://$PROJECT_DIR$/okhttputils/okhttputils.iml" filepath="$PROJECT_DIR$/okhttputils/okhttputils.iml" />
       <module fileurl="file://$PROJECT_DIR$/scrollablelayoutlib/scrollablelayoutlib.iml" filepath="$PROJECT_DIR$/scrollablelayoutlib/scrollablelayoutlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scrollablelayoutlib/scrollablelayoutlib.iml" filepath="$PROJECT_DIR$/scrollablelayoutlib/scrollablelayoutlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sharesdk/sharesdk.iml" filepath="$PROJECT_DIR$/sharesdk/sharesdk.iml" />
       <module fileurl="file://$PROJECT_DIR$/sharesdk/sharesdk.iml" filepath="$PROJECT_DIR$/sharesdk/sharesdk.iml" />
     </modules>
   </component>
